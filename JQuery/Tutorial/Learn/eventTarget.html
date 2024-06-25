@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>This is heading1</h1>
+    <h6>This is heading6</h6>
+    <p>This is a paragraph tag</p>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("body").on("click", function (event) {
+        alert("Targeted : " + event.target.nodeName);
+      });
+    });
+  </script>
+</html>
