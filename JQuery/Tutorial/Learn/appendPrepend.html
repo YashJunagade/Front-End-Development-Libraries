@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
+    <!--Append(add at the end)
+    Prepend(add at the beginning)-->
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#append").click(function () {
+        $("p").append("<h1>Yash</h1>");
+      });
+      $("#prepend").click(function () {
+        $("p").prepend("<h1>Yash</h1>");
+      });
+    });
+  </script>
+</html>
