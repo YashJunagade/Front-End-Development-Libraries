@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .div1,
+      .div2 {
+        height: 300px;
+        width: 500px;
+        border: 5px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <p class="p1">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore quae
+        enim totam, velit quasi omnis fugiat distinctio. Quibusdam quam aut
+        natus quisquam consectetur earum, laudantium voluptate! Ipsum qui quia
+        modi mollitia deleniti eaque totam eum architecto quas, possimus
+        inventore corrupti dignissimos ad asperiores repellat blanditiis. Minus
+        eligendi eos exercitationem perferendis temporibus deserunt, neque rem
+        dolorem voluptate eum obcaecati ab iure explicabo in odio sint error?
+        Harum porro delectus excepturi sint laudantium earum perspiciatis,
+        recusandae nemo, molestiae illo maxime aspernatur obcaecati accusantium
+        modi! Veniam nam consequatur porro culpa quia ipsum consectetur
+        architecto quaerat vitae natus tempora, sint illum, doloremque totam
+        fugit!
+      </p>
+    </div>
+    <ul>
+      <li>Orange</li>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Grapes</li>
+    </ul>
+    <div class="div2">
+      <p class="p2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dolores
+        fuga dignissimos nobis esse ipsam! Obcaecati vel ipsam culpa accusamus
+        doloribus, natus totam velit sunt. Dicta pariatur reiciendis, autem id
+        voluptatum obcaecati asperiores? Non vero quaerat nostrum doloremque
+        cupiditate veniam eligendi sequi assumenda, necessitatibus nihil autem
+        dolorem quae, dignissimos aut voluptatem. Neque porro hic mollitia
+        perferendis nobis sunt voluptate, non ratione impedit debitis quia et a
+        omnis perspiciatis aspernatur ipsa quasi eos exercitationem. Perferendis
+        exercitationem repellat tempore vitae minima, praesentium officia quos
+        blanditiis, ipsum facere quod non tenetur fugit provident corporis.
+        Voluptate aliquam perspiciatis quo repellat facere! Assumenda, ad nihil?
+      </p>
+    </div>
+  </body>
+  <!-- first(): target the first parameter element 
+    last() : target the last parameter element
+    eq() : target the numeric number element(number) starts from 0
+    filter() : target the parameter element in the specific element
+    not() : target all the element expect the parameter
+    slice() : target the number of element -->
+  <script>
+    $(document).ready(function () {
+      // $("p").first().css("background", "red");
+      //$("p").last().css("background", "red");
+      //$("li").eq(0).css("background", "red");
+      //$("p").filter(".p1").css("background", "red");
+      //$("p").not(".p1").css("background", "red");
+      $("li").slice(2).css("background", "red");
+    });
+  </script>
+</html>
