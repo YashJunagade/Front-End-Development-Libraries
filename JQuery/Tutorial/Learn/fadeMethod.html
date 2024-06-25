@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <button class="fadeIn">Fade In</button>
+    <button class="fadeOut">Fade Out</button>
+    <button class="fadeToggle">Fade Toggle</button>
+    <button class="fadeTo">Fade To</button>
+  </body>
+  <!--fadeIn():- show object with fade effect
+     fadeOut():- hide object with fade effect
+     fadeToggle() :- toggle object with the fade effect 
+     fadeTo()-->
+
+  <script>
+    $(document).ready(function () {
+      $(".fadeIn").click(function () {
+        $("p").fadeIn();
+      });
+      $(".fadeOut").click(function () {
+        $("p").fadeOut();
+      });
+      $(".fadeToggle").click(function () {
+        $("p").fadeToggle();
+      });
+      $(".fadeTo").click(function () {
+        $("p").fadeTo(2000, 0.5);
+      });
+    });
+  </script>
+</html>
