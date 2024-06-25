@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+  </body>
+  <!--type() :- is state which type of event is triggered-->
+  <script>
+    $(document).ready(function () {
+      $("p").on("click dblclick mouseover mouseout ", function (event) {
+        alert("Event : " + event.type);
+      });
+    });
+  </script>
+</html>
