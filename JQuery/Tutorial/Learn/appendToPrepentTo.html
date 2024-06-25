@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <button class="appendTo">AppendTo</button>
+    <button class="prependTo">PrependTo</button>
+    <!--Same as the append and Prepend the only difference is content comes first before the selector
+        explaing syntax : 
+        $(content).appendTo(selector);
+    -->
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".appendTo").click(function () {
+        $("<h1>Yash</h1>").appendTo("p");
+      });
+
+      $(".prependTo").click(function () {
+        $("<h1>Yash</h1>").prependTo("p");
+      });
+    });
+  </script>
+</html>
