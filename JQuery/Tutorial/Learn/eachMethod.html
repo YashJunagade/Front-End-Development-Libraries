@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <li>Apple</li>
+      <li>Mango</li>
+      <li>Orange</li>
+      <li>Grapes</li>
+    </ul>
+  </body>
+  <!--Each() : same as the foreach loop it helps to iterator on the element(ex:- li)-->
+  <script>
+    $(document).ready(function () {
+      $("li").each(function () {
+        alert($(this).html());
+      });
+    });
+  </script>
+</html>
