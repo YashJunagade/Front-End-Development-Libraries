@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <p>This is a <b>paragraph</b> tag</p>
+    <p>This is a <b>paragraph</b> tag</p>
+    <p>This is a paragraph tag</p>
+  </body>
+  <!--has() : target the parameter element with the child element
+        is() : target the parameter element(only used in if conditions{return the result in TRUE and FALSE})-->
+  <script>
+    $(document).ready(function () {
+      //$("p").has("b").css("color", "red");
+      if ($("p").children().is("b")) {
+        console.log($("p").children().is("b"));
+      }
+    });
+  </script>
+</html>
