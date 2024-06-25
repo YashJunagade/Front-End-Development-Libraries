@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .addclass {
+        background-color: blue;
+      }
+      .toggleclass {
+        color: white;
+      }
+      p {
+        background-color: black;
+        width: 50%;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <!--CSS Class Methods : (add CSS class in html DOM)
+            addClass(), removeClass(), toggleClass()-->
+
+    <button id="addclass">Add Class</button>
+    <button id="removeclass">Remove Class</button>
+    <button id="toggleclass">Toggle Class</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#addclass").click(function () {
+          $("p").addClass("addclass toggleclass");
+        });
+
+        $("#removeclass").click(function () {
+          $("p").removeClass("addclass");
+        });
+
+        $("#toggleclass").click(function () {
+          $("p").toggleClass("toggleclass");
+        });
+      });
+    </script>
+  </body>
+</html>
