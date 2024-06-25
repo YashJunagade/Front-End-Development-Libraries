@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <form action="" id="form">
+      Name : <input type="text" id="name" /><br /><br />
+      Class : <input type="text" id="class" /><br /><br />
+      Country :
+      <select id="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+      <br / ><br />
+      <input type="submit" />
+    </form>
+    <!--Form Event : focus(), blur(), change(), select(), submit() 
+    -->
+    <script>
+      $(document).ready(function () {
+        $("#name").focus(function () {
+          $(this).css("background-color", "lime");
+        });
+
+        $("#class").blur(function () {
+          $(this).css("background-color", "red");
+        });
+
+        $("#country").change(function () {
+          $(this).css("background-color", "pink");
+        });
+
+        $("#name").select(function () {
+          $(this).css("background-color", "yellow");
+        });
+
+        $("#form").submit(function () {
+          alert("Form Submitted");
+        });
+      });
+    </script>
+  </body>
+</html>
