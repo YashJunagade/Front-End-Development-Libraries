@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p class="check">This is a paragraph tag</p>
+    <button class="check">Check</button>
+    <!--hasClass() :- used to check the class is applied or not (Gives ans in TRUE or FALSE)
+        (it return true if it has the class or return false if it not)-->
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".check").click(function () {
+        alert($("p").hasClass("check"));
+      });
+    });
+  </script>
+</html>
