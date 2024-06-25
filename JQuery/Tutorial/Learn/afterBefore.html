@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="p"><p>This is a paragraph tag</p></div>
+    <button class="after">After</button>
+    <button class="before">Before</button>
+    <!--The difference between append, prepend and after, before is that it apply after, before the object -->
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".before").click(function () {
+        $("p").before("<h1>Yash</h1>");
+      });
+      $(".after").click(function () {
+        $("p").after("<h1>Yash</h1>");
+      });
+    });
+  </script>
+</html>
