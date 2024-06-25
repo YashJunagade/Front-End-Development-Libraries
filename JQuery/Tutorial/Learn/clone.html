@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .div1 {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1"><p>This is div1</p></div>
+    <div class="div2"><p>This is div2</p></div>
+    <button class="clone">Clone</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".clone").click(function () {
+        $(".div1 p").clone().prependTo(".div2");
+      });
+    });
+  </script>
+</html>
