@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <button class="animate">Animate</button>
+  </body>
+  <!--Syntax : $(selector).animate({parameters}, speed, callback)-->
+
+  <script>
+    $(document).ready(function () {
+      $(".animate").click(function () {
+        $("p").animate({ fontSize: "200px" }, Infinity);
+      });
+    });
+  </script>
+</html>
