@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <button class="toggle">Toggle</button>
+  </body>
+
+  <!--Hide() :- hide the object 
+      Show() :- show the object
+      Toggle() :- it can hide and also show the object -->
+  <script>
+    $(document).ready(function () {
+      $(".hide").click(function () {
+        $("p").hide();
+      });
+      $(".show").click(function () {
+        $("p").show();
+      });
+      $(".toggle").click(function () {
+        $("p").toggle();
+      });
+    });
+  </script>
+</html>
