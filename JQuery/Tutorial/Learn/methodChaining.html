@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .div {
+        width: 400px;
+        height: 400px;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div">
+      <br /><br />
+      <h1>This is a paragraph tag</h1>
+    </div>
+    <button class="animate">Animate</button>
+    <!--method chaining used when you have to perform a multiple methods in one selector
+        syntax : 
+                $(selector).method1().method2().method3()...and so on-->
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".animate").click(function () {
+        $("h1").css("color", "white").slideUp(2000).slideDown(2000);
+      });
+    });
+  </script>
+</html>
