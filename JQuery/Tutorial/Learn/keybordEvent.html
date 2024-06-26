@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .box {
+        width: 50%;
+        height: 20%;
+        border: 1px solid black;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>This is a paragraph tag</p>
+    </div>
+    <script>
+      // Keybord Event : keypress(), keydown(), keyup()
+      $(document).ready(function () {
+        $("body").keypress(function () {
+          alert("Key pressed");
+        });
+
+        $("body").keydown(function () {
+          alert("Key down pressed");
+        });
+
+        $("body").keyup(function () {
+          alert("Key up pressed");
+        });
+      });
+    </script>
+  </body>
+</html>
