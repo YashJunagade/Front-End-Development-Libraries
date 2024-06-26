@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p id="p">This is a paragraph tag</p>
+    <button id="remove">remove</button>
+  </body>
+  <script>
+    $("#p").on({
+      mouseenter: function () {
+        $(this).css("color", "red");
+      },
+      click: function () {
+        $(this).css("font-size", "100px");
+      },
+      dblclick: function () {
+        $(this).css("color", "white");
+      },
+    });
+
+    $("#remove").click(function () {
+      $("p").off("mouseenter click");
+    });
+  </script>
+</html>
