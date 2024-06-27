@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <button id="button">Set Values</button>
+    <form action="" id="form">
+      Name : <input type="text" id="name" /><br /><br />
+      Class : <input type="text" id="class" /><br /><br />
+      Country :
+      <select id="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+      <br / ><br />
+      <input type="submit" />
+    </form>
+    <!--Set Method(set any html element(DOM element))
+            text(), html(), attr(), val()-->
+
+    <script>
+      $(document).ready(function () {
+        $("#button").click(function () {
+          //   $("p").text("Hello Yash");
+          //   $("p").html("<h1>Yash</h1>");
+          //   $("p").attr("name", "ptag");
+          $("#name").val("Yash Anil Junagade");
+        });
+      });
+    </script>
+  </body>
+</html>
