@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <button class="slideUp">Slide Up</button>
+    <button class="slideDown">Slide Down</button>
+    <button class="slideToggle">Slide Toggle</button>
+  </body>
+  <!--slideUp() :- show object with the slide animation
+      slideDown() :- Hide object with the Slide animation  
+      slideToggle() :- Hide and Show With the Slide Anilmation -->
+
+  <script>
+    $(document).ready(function () {
+      $(".slideUp").click(function () {
+        $("p").slideUp();
+      });
+      $(".slideDown").click(function () {
+        $("p").slideDown();
+      });
+      $(".slideToggle").click(function () {
+        $("p").slideToggle();
+      });
+    });
+  </script>
+</html>
