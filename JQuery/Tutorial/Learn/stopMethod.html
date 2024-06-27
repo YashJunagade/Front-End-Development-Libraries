@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div"><p>This is a paragraph tag</p></div>
+    <button class="animate">Animate</button>
+    <button class="stop">Stop</button>
+  </body>
+
+  <!--stop() : is used to stop any animation and movement in the html(it always work with a one animation)
+        stop(without parameter) : stops at any position you want
+        stop(true) : stop all animation
+        stop(true, true) : finish the animation-->
+  <script>
+    $(document).ready(function () {
+      $(".animate").click(function () {
+        $(".div").animate({ left: "1000px" }, 6000);
+      });
+
+      $(".stop").click(function () {
+        $(".div").stop(); // if you want to stop all animation at once Give Parameter 'true'
+      });
+    });
+  </script>
+</html>
