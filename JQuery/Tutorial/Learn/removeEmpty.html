@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="div">
+      <p id="p">This is a paragraph tag 1</p>
+      <p>This is a paragraph tag 2</p>
+    </div>
+    <button class="empty">Empty</button>
+    <button class="remove">Remove</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".empty").click(function () {
+        $("#p").empty();
+      });
+      $(".remove").click(function () {
+        $("p").remove();
+      });
+    });
+  </script>
+</html>
