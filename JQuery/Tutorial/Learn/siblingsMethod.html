@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .main {
+        width: 600px;
+        height: 600px;
+        background-color: #ff0000;
+        margin: auto;
+      }
+      .outer {
+        width: 500px;
+        height: 500px;
+        background-color: blue;
+        margin: auto;
+      }
+      .outer {
+        width: 400px;
+        height: 400px;
+        background-color: rgb(247, 0, 255);
+        margin: auto;
+      }
+      .inner {
+        width: 300px;
+        height: 300px;
+        background-color: rgb(191, 255, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: auto;
+      }
+      .div,
+      .divC,
+      .diva,
+      .dive {
+        width: 50px;
+        height: 50px;
+        color: white;
+        border: 2px solid white;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Main</h1>
+      <div class="outer">
+        <h1>Outer</h1>
+        <div class="inner">
+          <h1>Inner</h1>
+          <div class="diva">A</div>
+          <div class="div">B</div>
+          <div class="divC">C</div>
+          <div class="div">D</div>
+          <div class="dive">E</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!--Siblings Methods : targets the element with the same parent
+        siblings() : target all the siblings(it can also target to the specific sibling with parameter)
+        next() : target the next sibling
+        nextAll() : target the all next sibling
+        nextUntil() : target the all next sibling until the parameter match
+        prev() : target the previous sibling 
+        prevAll() : target the all previous sibling 
+        prevUntil() : target the all previous sibling until the parameer match-->
+
+  <script>
+    $(document).ready(function () {
+      //   $(".divC").siblings("h1").css("color", "red");
+      //   $(".divC").next().css("color", "red");
+      //   $(".divC").prev().css("color", "red");
+      // $(".divC").prevAll().css("color", "red");
+      // $(".divC").nextAll().css("color", "red");
+      //   $(".divC").nextUntil(".dive").css("color", "red");
+      //   $(".divC").prevUntil(".diva").css("color", "red");
+    });
+  </script>
+</html>
