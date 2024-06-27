@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p>This is a paragraph tag</p>
+    <p id="pid">This is a paragraph tag selected with id</p>
+    <p class="pclass">This is a paragraph tag selected with Class</p>
+
+    <script>
+      // $("*") is used to select all elements in html(same as css)
+      // $("ul li") (parent, child) selector
+      // $(".class1, .class2, .class3") used to target multiple class (same we can use for Tag selector { $("tag1, tag2") })
+      // $("p:first") used with pseudo selector (more ("p:last"), ("p:even"), ("p:odd"))
+      $(document).ready(function () {
+        console.log($("p").html()); // Tag Selector : $("TagName")
+        console.log($("#pid").html()); // Id Selector : $("#IdName")
+        console.log($(".pclass").css("color", "red")); // Class Selector : $(".ClassName") CSS("Property-Name", "")
+      });
+    </script>
+  </body>
+</html>
