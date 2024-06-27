@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>This is heading 1</h1>
+    <p>This is a paragraph tag1</p>
+    <p>This is a paragraph tag2</p>
+
+    <button class="wrapAll">WrapAll</button>
+    <button class="wrapInner">WrapInner</button>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      $(".wrapAll").click(function () {
+        $("p").wrapAll("<div></div>");
+      });
+      $(".wrapInner").click(function () {
+        $("h1").wrapInner("<p>Yash Junagade</p>");
+      });
+    });
+  </script>
+</html>
