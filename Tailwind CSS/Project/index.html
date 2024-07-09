@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nike</title>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/a87c607c38.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="p-3 flex bg-white justify-between items-center">
+      <a href="" id="brand" class="flex gap-2 items-center flex-1">
+        <img
+          class="object-cover max-w-12 max-h-12"
+          src="/Tailwind CSS/Project/images/asset 0.png"
+          alt="logo"
+        />
+        <span class="text-lg font-medium font-display">ToDesktop</span>
+      </a>
+
+      <div id="nav-menu" class="hidden lg:flex gap-12">
+        <a href="" class="font-medium hover:text-primary">Pricing</a>
+        <a href="" class="font-medium hover:text-primary">Docs</a>
+        <a href="" class="font-medium hover:text-primary">ChangeLog</a>
+        <a href="" class="font-medium hover:text-primary">Blogs</a>
+        <a href="" class="font-medium hover:text-primary">Login</a>
+      </div>
+
+      <div class="hidden flex-1 lg:flex justify-end">
+        <button
+          class="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"
+        >
+          <img src="/Tailwind CSS/Project/images/asset 1.svg" />
+          <span>Electron Developers</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <button class="p-2 lg:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600"></i>
+      </button>
+
+      <!-- mobile navbar  -->
+      <div
+        id="nav-dialog"
+        class="hidden z-10 lg:hidden fixed bg-white inset-0 p-3"
+      >
+        <div id="nav-bar" class="flex justify-between items-center">
+          <a href="" id="brand" class="flex gap-2 items-center">
+            <img
+              class="object-cover max-w-12 max-h-12"
+              src="/Tailwind CSS/Project/images/asset 0.png"
+              alt="logo"
+            />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+
+          <button class="p-2" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+
+        <div class="mt-6">
+          <a
+            href=""
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Pricing</a
+          >
+          <a
+            href=""
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Docs</a
+          >
+          <a
+            href=""
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >ChangeLog</a
+          >
+          <a
+            href=""
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Blogs</a
+          >
+          <a
+            href=""
+            class="font-medium m-3 p-3 hover:bg-gray-50 block rounded-lg"
+            >Login</a
+          >
+        </div>
+
+        <div class="h-[1px] bg-gray-300"></div>
+
+        <button
+          class="w-full mt-6 flex gap-2 items-center px-6 py-4 rounded-lg hover:bg-gray-50"
+        >
+          <img src="/Tailwind CSS/Project/images/asset 1.svg" />
+          <span>Electron Developers</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero Section  -->
+      <div
+        id="hero"
+        class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to-transparent"
+      >
+        <div
+          id="hero-container"
+          class="max-w-4xl mx-auto px-6 pb-32 flex flex-col pt-6 sm:items-center sm:text-center"
+        >
+          <div
+            id="version-text"
+            class="flex my-6 gap-2 items-center border border-yellow-300 bg-yellow-50 rounded-lg px-3 py-1 w-fit shadow-md hover:shadow-lg hover:-translate-y-1 transition group"
+          >
+            <div
+              class="w-2 h-2 bg-yellow-400 rounded-full border border-yellow-600"
+            ></div>
+            <p class="font-display font-medium text-yellow-600">
+              v0.21.1:
+              <span class="text-yellow-800">Find-in-page bug fixes</span>
+            </p>
+            <i
+              class="fa-solid fa-arrow-right text-yellow-600 group-hover:translate-x-1 transition duration-300"
+            ></i>
+          </div>
+
+          <h1
+            class="text-4xl font-semibold leading-snug mt-4 sm:text-7xl sm:leading-normal"
+          >
+            Web app to desktop app in minutes
+          </h1>
+          <p class="text-xl mt-4 sm:text-2xl sm:mt-8 text-gray-800">
+            Take your web app codebase and transform in into a scross platform
+            desktop app with native functionality
+          </p>
+          <div
+            id="button-container"
+            class="mt-12 flex flex-col sm:flex-row gap-4"
+          >
+            <button
+              class="px-8 py-3 font-semibold rounded-lg text-white bg-primary shadow-sm hover:bg-opacity-90"
+            >
+              Downlaod now
+            </button>
+            <button
+              class="px-8 py-3 font-semibold rounded-lg bg-white border border-x-gray-400 hover:border-gray-800"
+            >
+              Read Docs
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script src="script.js"></script>
+</html>
