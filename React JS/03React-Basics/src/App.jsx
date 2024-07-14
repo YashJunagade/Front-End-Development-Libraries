@@ -1,5 +1,5 @@
 import ErrorMsg from "../components/ErrorMsg";
-import FoodItems from "../components/FootItems";
+import FoodItems from "../components/FoodItems";
 import "./App.css";
 
 function App() {
