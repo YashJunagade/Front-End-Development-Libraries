@@ -1,19 +1,14 @@
+import ErrorMsg from "../components/ErrorMsg";
+import FoodItems from "../components/FootItems";
 import "./App.css";
 
 function App() {
-  let items = ["egg", "milk", "bread", "butter"];
-
-  if (items.length === 0) {
-    return <h1>i'm hungry.</h1>;
-  }
+  let itemsList = ["egg", "milk", "bread", "butter"];
   return (
     <>
       <h1>Item List</h1>
-      <ul>
-        {items.map((item) => (
-          <li>{item}</li>
-        ))}
-      </ul>
+      <ErrorMsg items={itemsList}></ErrorMsg>
+      <FoodItems items={itemsList}></FoodItems>
     </>
   );
 }
