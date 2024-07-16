@@ -5,7 +5,13 @@ const FoodItems = ({ items }) => {
   return (
     <ul className={style["ul-class"]}>
       {items.map((item) => (
-        <Items key={item} foodItem={item}></Items>
+        <Items
+          key={item}
+          foodItem={item}
+          handleBuyButton={() => {
+            alert(`bought the ${item}`);
+          }}
+        ></Items>
       ))}
     </ul>
   );

@@ -1,13 +1,10 @@
 import style from "./Items.module.css";
 
-const Items = ({ foodItem }) => {
+const Items = ({ foodItem, handleBuyButton }) => {
   return (
     <div className={style.list}>
       <li className="Li">{foodItem}</li>
-      <button
-        className={style.button}
-        onClick={() => alert(`You bought the ${foodItem}.`)}
-      >
+      <button className={style.button} onClick={handleBuyButton}>
         Buy now
       </button>
     </div>
