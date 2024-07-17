@@ -6,7 +6,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  let [itemsList, setItemList] = useState(["egg", "milk", "bread", "butter"]);
+  let [itemsList, setItemList] = useState([]);
 
   const addNewFood = (event) => {
     if (event.key === "Enter") {
