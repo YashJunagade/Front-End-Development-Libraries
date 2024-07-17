@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-input {
+  width: 300px;
+  margin-right: 15px;
+}
+
+.date-input {
+  width: 75px;
+}

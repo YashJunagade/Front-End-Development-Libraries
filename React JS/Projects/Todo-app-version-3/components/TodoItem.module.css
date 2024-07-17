@@ -1,0 +1,16 @@
+.todo-list {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.todoname {
+  flex: 9;
+}
+.tododate {
+  flex: 2;
+}
+.btn {
+  flex: 1;
+}
