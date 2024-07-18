@@ -1,6 +1,6 @@
 import TodoItem from "./TodoItem";
 
-const TodoItems = ({ todoitems }) => {
+const TodoItems = ({ todoitems, handleDeleteTodo }) => {
   return (
     <>
       {todoitems.map((item) => (
@@ -8,6 +8,7 @@ const TodoItems = ({ todoitems }) => {
           key={item.name}
           TodoName={item.name}
           TodoDate={item.dueDate}
+          onTodoDelete={handleDeleteTodo}
         ></TodoItem>
       ))}
     </>
