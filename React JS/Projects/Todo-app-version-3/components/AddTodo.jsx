@@ -1,48 +1,41 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./AddTodo.module.css";
 import { IoMdAdd } from "react-icons/io";
 
 function AddTodo({ onNewItem }) {
-  const [todoname, setTodoName] = useState("");
-  const [dueDate, setDueDate] = useState("");
+  const todoNameElement = useRef();
+  const dueDateElement = useRef();
 
-  const handleNameChange = (event) => {
-    setTodoName(event.target.value);
-  };
-
-  const handleDateChange = (event) => {
-    setDueDate(event.target.value);
-  };
-
-  const handleAddBtnClick = () => {
-    onNewItem(todoname, dueDate);
-    setTodoName("");
-    setDueDate("");
+  const handleAddBtnClick = (event) => {
+    event.preventDefault();
+    const todoName = todoNameElement.current.value;
+    const dueDate = dueDateElement.current.value;
+    onNewItem(todoName, dueDate);
+    todoNameElement.current.value = "";
+    dueDateElement.current.value = "";
   };
 
   return (
-    <div className={styles["container"]}>
+    <form className={styles["container"]} onSubmit={handleAddBtnClick}>
       <input
         type="text"
         className={styles["text-input"]}
         placeholder="enter your task"
-        onChange={handleNameChange}
-        value={todoname}
+        ref={todoNameElement}
       />
       <div className="col-4">
         <input
           type="date"
           className={styles["date-input"]}
-          onChange={handleDateChange}
-          value={dueDate}
+          ref={dueDateElement}
         />
       </div>
       <div className={styles["col"]}>
-        <button type="button" onClick={handleAddBtnClick}>
+        <button>
           <IoMdAdd />
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 
