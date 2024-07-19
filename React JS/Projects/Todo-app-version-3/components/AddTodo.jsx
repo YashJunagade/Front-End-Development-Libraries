@@ -1,9 +1,10 @@
 import { useState } from "react";
 import styles from "./AddTodo.module.css";
+import { IoMdAdd } from "react-icons/io";
 
 function AddTodo({ onNewItem }) {
-  const [todoname, setTodoName] = useState();
-  const [dueDate, setDueDate] = useState();
+  const [todoname, setTodoName] = useState("");
+  const [dueDate, setDueDate] = useState("");
 
   const handleNameChange = (event) => {
     setTodoName(event.target.value);
@@ -38,7 +39,7 @@ function AddTodo({ onNewItem }) {
       </div>
       <div className={styles["col"]}>
         <button type="button" onClick={handleAddBtnClick}>
-          Add
+          <IoMdAdd />
         </button>
       </div>
     </div>
