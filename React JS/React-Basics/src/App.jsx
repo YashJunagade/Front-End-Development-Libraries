@@ -1,15 +1,11 @@
-import Hello from "./Hello";
-import Random from "./Random";
+import Heading from "./Components/Heading";
+import ItemList from "./Components/ItemList";
 
 function App() {
   return (
     <>
-      <Hello></Hello>
-      <Random></Random>
-      <Random></Random>
-      <Random></Random>
-      <Random></Random>
-      <Random></Random>
+      <Heading></Heading>
+      <ItemList></ItemList>
     </>
   );
 }
