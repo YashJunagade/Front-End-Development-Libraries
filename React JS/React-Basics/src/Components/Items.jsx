@@ -1,9 +1,7 @@
-function Items({ foodItems }) {
+function Items({ item }) {
   return (
     <>
-      {foodItems.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
+      <li>{item}</li>
     </>
   );
 }

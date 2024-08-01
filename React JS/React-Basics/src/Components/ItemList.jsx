@@ -3,7 +3,9 @@ import Items from "./Items";
 function ItemList({ foodItems }) {
   return (
     <ul>
-      <Items foodItems={foodItems}></Items>
+      {foodItems.map((item) => (
+        <Items key={item} item={item}></Items>
+      ))}
     </ul>
   );
 }
