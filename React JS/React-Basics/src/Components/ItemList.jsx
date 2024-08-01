@@ -1,15 +1,10 @@
-function ItemList() {
-  let foodItems = ["Salad", "Milk", "butter", "seeds", "Ghee"];
+import Items from "./Items";
 
+function ItemList({ foodItems }) {
   return (
-    <>
-      {foodItems.length == 0 && <h1>I'm hungry</h1>}
-      <ul>
-        {foodItems.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </>
+    <ul>
+      <Items foodItems={foodItems}></Items>
+    </ul>
   );
 }
 
