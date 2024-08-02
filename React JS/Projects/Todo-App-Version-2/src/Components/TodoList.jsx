@@ -1,10 +1,12 @@
-function TodoList() {
+import TodoItem from "./TodoItem";
+
+function TodoList({ todoItems }) {
   return (
-    <div className="todo-list">
-      <p className="class1">Buy Milk</p>
-      <p className="class2">29/07/2024</p>
-      <button className="class3">Delete</button>
-    </div>
+    <>
+      {todoItems.map((item) => (
+        <TodoItem name={item.name} date={item.date} key={item.name}></TodoItem>
+      ))}
+    </>
   );
 }
 
