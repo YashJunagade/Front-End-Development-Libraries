@@ -1,9 +1,9 @@
-const FoodInput = ({ handleOnChange }) => {
+const FoodInput = ({ handleKeyDown }) => {
   return (
     <input
       type="text"
       placeholder="Enter Food Item"
-      onChange={handleOnChange}
+      onKeyDown={handleKeyDown}
     />
   );
 };

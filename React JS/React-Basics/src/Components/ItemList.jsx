@@ -1,9 +1,6 @@
 import Items from "./Items";
 
 function ItemList({ foodItems }) {
-  function handleClickBtn() {
-    alert(` is bought`);
-  }
   return (
     <ul>
       {foodItems.map((item) => (
