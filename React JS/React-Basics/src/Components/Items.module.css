@@ -1,3 +1,7 @@
 .list {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 6px;
 }
