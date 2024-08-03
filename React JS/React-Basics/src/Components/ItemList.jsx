@@ -1,14 +1,13 @@
-import Items from "./Items";
+import style from "./ItemList.module.css";
 
-function ItemList({ foodItems }) {
+function ItemList({ foodItems, handleDeleteItem }) {
   return (
     <ul>
-      {foodItems.map((item) => (
-        <Items
-          key={item}
-          item={item}
-          handleClickBtn={() => alert(`${item} is bought`)}
-        ></Items>
+      {foodItems.map((foodItem, index) => (
+        <li key={index}>
+          {foodItem}
+          <button onClick={() => handleDeleteItem(foodItem)}>Delete</button>
+        </li>
       ))}
     </ul>
   );

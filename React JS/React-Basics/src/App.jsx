@@ -23,12 +23,21 @@ function App() {
       event.target.value = "";
     }
   }
+
+  function onDeleteItem(item) {
+    let deleteItem = foodItems.filter((foodItem) => foodItem !== item);
+    setFoodItems(deleteItem);
+  }
+
   return (
     <Container>
       <Heading></Heading>
       <ErrorMsg foodItems={foodItems}></ErrorMsg>
       <FoodInput handleKeyDown={onKeyDown}></FoodInput>
-      <ItemList foodItems={foodItems}></ItemList>
+      <ItemList
+        foodItems={foodItems}
+        handleDeleteItem={onDeleteItem}
+      ></ItemList>
     </Container>
   );
 }
