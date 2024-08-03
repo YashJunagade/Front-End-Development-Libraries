@@ -1,10 +1,6 @@
 import style from "./Items.module.css";
 
-function Items({ item }) {
-  function handleClickBtn() {
-    alert(`${item} is bought`);
-  }
-
+function Items({ item, handleClickBtn }) {
   return (
     <>
       <li className={style.list}>

@@ -1,9 +1,9 @@
-const FoodInput = () => {
+const FoodInput = ({ handleOnChange }) => {
   return (
     <input
       type="text"
       placeholder="Enter Food Item"
-      onChange={(event) => console.log(event.target.value)}
+      onChange={handleOnChange}
     />
   );
 };
