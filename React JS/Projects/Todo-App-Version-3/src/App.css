@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main {
+  border: 1px solid;
+  width: 600px;
+}
+
+.class1 {
+  width: 45%;
+  margin-right: 20px;
+}
+
+.class2 {
+  width: 25%;
+  margin-right: 20px;
+}
+
+.main button {
+  margin-left: 20px;
+}
+
+.todo-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
