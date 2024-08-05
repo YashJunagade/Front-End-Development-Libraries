@@ -1,7 +1,9 @@
 import styles from "./Display.module.css";
 
-const Display = () => {
-  return <input className={styles.display} type="text" />;
+const Display = ({ currVal }) => {
+  return (
+    <input className={styles.display} type="text" value={currVal} readOnly />
+  );
 };
 
 export default Display;
