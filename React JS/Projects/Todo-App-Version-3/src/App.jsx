@@ -9,7 +9,10 @@ function App() {
   let [todoItems, setTodoItems] = useState([]);
 
   let handleNewItem = (itemName, itemDate) => {
-    setTodoItems([...todoItems, { name: itemName, date: itemDate }]);
+    setTodoItems((currItem) => [
+      ...currItem,
+      { name: itemName, date: itemDate },
+    ]);
   };
 
   function handleDeleteBtn(iName) {
