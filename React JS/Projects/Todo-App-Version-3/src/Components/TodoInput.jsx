@@ -1,39 +1,26 @@
-import { useState } from "react";
+import { useRef } from "react";
 
 function TodoInput({ onNewItem }) {
-  let [itemName, setItemName] = useState("");
-  let [itemDate, setItemDate] = useState("");
+  const itemName = useRef();
+  const itemDate = useRef();
 
-  function handleItemName(event) {
-    setItemName(event.target.value);
-  }
-  function handleItemDate(event) {
-    setItemDate(event.target.value);
-  }
-  function handleBtnClick() {
-    onNewItem(itemName, itemDate);
-    setItemName("");
-    setItemDate("");
+  function handleBtnClick(event) {
+    event.preventDefault();
+    onNewItem(itemName.current.value, itemDate.current.value);
+    itemName.current.value = "";
+    itemDate.current.value = "";
   }
   return (
-    <div className="input-todo">
+    <form className="input-todo" onSubmit={handleBtnClick}>
       <input
         className="class1"
         type="text"
+        ref={itemName}
         placeholder="Enter Todo here"
-        value={itemName}
-        onChange={handleItemName}
       />
-      <input
-        className="class2"
-        type="date"
-        value={itemDate}
-        onChange={handleItemDate}
-      />
-      <button className="class3" onClick={handleBtnClick}>
-        Add
-      </button>
-    </div>
+      <input className="class2" type="date" ref={itemDate} />
+      <button className="class3">Add</button>
+    </form>
   );
 }
 
