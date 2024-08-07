@@ -1,12 +1,14 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { TodoItemsContext } from "../store/todo-item-context";
 
-function TodoInput({ onNewItem }) {
+function TodoInput() {
   const itemName = useRef();
   const itemDate = useRef();
+  const { addNewItem } = useContext(TodoItemsContext);
 
   function handleBtnClick(event) {
     event.preventDefault();
-    onNewItem(itemName.current.value, itemDate.current.value);
+    addNewItem(itemName.current.value, itemDate.current.value);
     itemName.current.value = "";
     itemDate.current.value = "";
   }
