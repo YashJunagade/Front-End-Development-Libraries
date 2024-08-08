@@ -25,5 +25,9 @@
 .create-post {
   width: 60%;
   margin-left: 20%;
-  margin-top: 20%;
+  margin-top: 100px;
+}
+
+.wlc-msg {
+  margin: 100px 0;
 }

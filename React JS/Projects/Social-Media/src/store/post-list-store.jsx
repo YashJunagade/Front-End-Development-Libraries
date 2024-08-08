@@ -4,6 +4,7 @@ export const PostList = createContext({
   postList: [],
   addPost: () => {},
   deletePost: () => {},
+  addInitialPosts: () => {},
 });
 
 const postListReducer = (currPostList, action) => {
@@ -14,15 +15,14 @@ const postListReducer = (currPostList, action) => {
     );
   } else if (action.type === "ADD_POST") {
     newPostList = [action.payload, ...currPostList];
+  } else if (action.type === "ADD_INITIAL_POSTS") {
+    newPostList = action.payload.posts;
   }
   return newPostList;
 };
 
 const PostListProvider = ({ children }) => {
-  const [postList, dispatchPostList] = useReducer(
-    postListReducer,
-    DEFAULT_POST_LIST
-  );
+  const [postList, dispatchPostList] = useReducer(postListReducer, []);
 
   function addPost(userId, postTitle, postContent, reactions, tags) {
     dispatchPostList({
@@ -34,6 +34,15 @@ const PostListProvider = ({ children }) => {
         reactions: reactions,
         userId: userId,
         tags: tags,
+      },
+    });
+  }
+
+  function addInitialPosts(posts) {
+    dispatchPostList({
+      type: "ADD_INITIAL_POSTS",
+      payload: {
+        posts,
       },
     });
   }
@@ -53,30 +62,12 @@ const PostListProvider = ({ children }) => {
         postList,
         addPost,
         deletePost,
+        addInitialPosts,
       }}
     >
       {children}
     </PostList.Provider>
   );
 };
-
-const DEFAULT_POST_LIST = [
-  {
-    id: 1,
-    title: "Going to mumbai",
-    body: "Hii..Guys i going to mumbai first time say me safe journey",
-    reactions: 2,
-    userId: "yash",
-    tags: ["vaction", "mumbai", "enjoying"],
-  },
-  {
-    id: 2,
-    title: "Preparing For My Interviews",
-    body: "helo friends.. i preparing for my interview anyone has any suggestions for me or any resourse that can help me",
-    reactions: 10,
-    userId: "tonystack",
-    tags: ["interview", "dsa", "studying"],
-  },
-];
 
 export default PostListProvider;
