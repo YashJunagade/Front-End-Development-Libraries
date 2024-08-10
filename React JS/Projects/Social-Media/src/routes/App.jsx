@@ -10,15 +10,10 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const [selectedTab, setSelectedTab] = useState("Home");
-
   return (
     <PostListProvider>
       <div className="app-container">
-        <Sidebar
-          selectedTab={selectedTab}
-          setSelectedTab={setSelectedTab}
-        ></Sidebar>
+        <Sidebar></Sidebar>
         <div className="content">
           <Header></Header>
           <Outlet></Outlet>
