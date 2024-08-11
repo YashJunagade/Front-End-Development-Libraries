@@ -1,8 +1,8 @@
-function Display() {
+function Display({ author, quote, loding }) {
   return (
     <div className="display-container">
-      <div id="text">No amount of money can buy a seconds of time</div>
-      <div id="author">Tony Stark</div>
+      <div id="text">{loding ? "Loading..." : `${quote}`}</div>
+      <div id="author">{loding ? "" : `${author}`}</div>
     </div>
   );
 }
