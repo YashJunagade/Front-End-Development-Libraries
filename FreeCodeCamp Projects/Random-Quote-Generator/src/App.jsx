@@ -3,6 +3,7 @@ import Display from "./components/Display";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
+import Contribute from "./components/Contribute";
 
 function App() {
   const [quote, setQuote] = useState("");
@@ -41,6 +42,7 @@ function App() {
         <Display author={author} quote={quote} loding={loding}></Display>
         <Controls tweetQuote={tweetQuote} fetchQuote={fetchQuote}></Controls>
       </div>
+      <Contribute />
     </>
   );
 }

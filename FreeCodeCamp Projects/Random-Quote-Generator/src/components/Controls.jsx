@@ -1,3 +1,5 @@
+import { FaRetweet } from "react-icons/fa6";
+
 function Controls({ tweetQuote, fetchQuote }) {
   return (
     <div className="controls-container">
@@ -9,10 +11,12 @@ function Controls({ tweetQuote, fetchQuote }) {
           tweetQuote();
         }}
       >
-        click here
+        <button>
+          <i class="fa-brands fa-square-x-twitter"></i> tweet
+        </button>
       </a>
       <div id="new-quote">
-        <button onClick={fetchQuote}>new Quote</button>
+        <button onClick={fetchQuote}>New Quote</button>
       </div>
     </div>
   );
