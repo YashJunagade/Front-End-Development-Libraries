@@ -1,0 +1,11 @@
+.container {
+  border: 1px solid black;
+}
+
+.control-row {
+  margin-top: 20px;
+}
+
+.input-num {
+  width: 120px;
+}
